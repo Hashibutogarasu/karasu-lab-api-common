@@ -1,4 +1,3 @@
-import { BetterAuthPlugin } from 'better-auth';
 import {
   createAuthEndpoint,
   sessionMiddleware,
@@ -103,5 +102,5 @@ export const oauthApplicationPluginInterface = () => {
         },
       ),
     },
-  } satisfies BetterAuthPlugin;
+  };
 };

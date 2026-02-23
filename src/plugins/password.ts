@@ -37,5 +37,5 @@ export const passwordPluginInterface = () => {
         },
       ),
     },
-  } satisfies BetterAuthPlugin;
+  };
 };
