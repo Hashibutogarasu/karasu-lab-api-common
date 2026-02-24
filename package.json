@@ -1,6 +1,6 @@
 {
   "name": "@karasu-lab/common",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
