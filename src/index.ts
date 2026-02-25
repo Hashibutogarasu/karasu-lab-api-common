@@ -6,9 +6,16 @@ export { oauthApplicationPluginInterface } from './plugins/oauth-application.js'
 export { passkeyPluginInterface } from './plugins/passkey.js';
 export * from './interfaces/endpoint.interface.js';
 export * from './interfaces/plugin.interface.js';
+export * from './interfaces/auth-config.interface.js';
 export {
   AbstractEnvironment,
   Environment,
   EnvironmentUtils,
 } from './environment.js';
 export type { IEnvironment } from './environment.js';
+export {
+  ProductionAuthClientConfig,
+  DevelopmentAuthClientConfig,
+  TestAuthClientConfig,
+  createAuthClientConfig,
+} from './config/auth-client-config.js';
