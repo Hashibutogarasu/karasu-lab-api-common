@@ -21,18 +21,11 @@ export {
   TestAuthClientConfig,
   createAuthClientConfig,
 } from './config/auth-client-config.js';
-export {
-  BetterAuthBuilder,
-} from './builder/better-auth-builder.js';
+export { BetterAuthBuilder } from './builder/better-auth-builder.js';
 export type {
   IBetterAuthBuilder,
   IBetterAuthClient,
   BetterAuthServer,
 } from './builder/better-auth-builder.js';
-export {
-  PluginBuilder,
-  createPlugin,
-} from './builder/plugin-builder.js';
-export type {
-  PluginEndpointConfig,
-} from './builder/plugin-builder.js';
+export { PluginBuilder, createPlugin } from './builder/plugin-builder.js';
+export type { PluginEndpointConfig } from './builder/plugin-builder.js';
