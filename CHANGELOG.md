@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v0.3.1...v0.4.0) (2026-02-28)
+
+
+### Features
+
+* added auth error ([6cabd5d](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/6cabd5ddb5e28531a2fc5f5da0b26ea5a890b8f7))
+
 ## [0.3.1](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v0.3.0...v0.3.1) (2026-02-26)
 
 
