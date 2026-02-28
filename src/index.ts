@@ -1,5 +1,4 @@
-export { throwIfError } from './throw-if-error.js';
-export type { BetterAuthError } from './throw-if-error.js';
+export { ClientAuthError } from './errors/client-auth-error.js';
 export { passwordPluginInterface } from './plugins/password.js';
 export { oauthApplicationPluginInterface } from './plugins/oauth-application.js';
 export { passkeyPluginInterface } from './plugins/passkey.js';
