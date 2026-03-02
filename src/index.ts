@@ -27,3 +27,5 @@ export type {
 } from './builder/better-auth-builder.js';
 export { PluginBuilder, createPlugin } from './builder/plugin-builder.js';
 export type { PluginEndpointConfig } from './builder/plugin-builder.js';
+export { UserRole } from './roles.js';
+export type { UserRole as UserRoleType } from './roles.js';
