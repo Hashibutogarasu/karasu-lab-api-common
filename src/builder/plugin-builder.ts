@@ -181,7 +181,7 @@ export class PluginBuilder<
   /**
    * Build both server and client plugins
    */
-  build() {
+  build(): { server: BetterAuthPlugin; client: ClientPlugin<TId, TEndpoints> } {
     return {
       server: this.buildServer(),
       client: this.buildClient(),
