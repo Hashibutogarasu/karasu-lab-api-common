@@ -1,4 +1,6 @@
 export { ClientAuthError } from './errors/client-auth-error.js';
+export { BlogStatus } from './blog.js';
+export type { BlogStatus as BlogStatusType } from './blog.js';
 export { passwordPluginInterface } from './plugins/password.js';
 export { oauthApplicationPluginInterface } from './plugins/oauth-application.js';
 export { passkeyPluginInterface } from './plugins/passkey.js';
