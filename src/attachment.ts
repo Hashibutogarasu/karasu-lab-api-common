@@ -11,8 +11,8 @@ export const attachmentDataSchema = z.object({
   size: z.number(),
   status: z.enum(['draft', 'published', 'archived', 'locked']),
   authorId: z.string(),
-  createdAt: z.union([z.string(), z.date()]),
-  updatedAt: z.union([z.string(), z.date()]),
+  createdAt: z.string(),
+  updatedAt: z.string(),
 });
 
 /**

@@ -22,8 +22,8 @@ export const blogDataSchema = z.object({
   authorId: z.string(),
   status: z.nativeEnum(BlogStatus),
   tags: z.array(z.string()),
-  createdAt: z.union([z.string(), z.date()]),
-  updatedAt: z.union([z.string(), z.date()]),
+  createdAt: z.string(),
+  updatedAt: z.string(),
   attachments: z.array(attachmentDataSchema).optional(),
 });
 
