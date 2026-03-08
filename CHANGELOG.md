@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v0.6.0...v0.7.0) (2026-03-08)
+
+
+### Features
+
+* introduce Zod schemas and types for blog and attachment entities in the common package. ([4e4ecca](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/4e4ecca1070ca104741ec050950863dd9fede971))
+
 ## [0.6.0](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v0.5.1...v0.6.0) (2026-03-04)
 
 
