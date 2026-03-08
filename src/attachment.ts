@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { BlogStatus } from './blog.js';
 
 /**
  * Attachment metadata schema.
@@ -10,7 +9,7 @@ export const attachmentDataSchema = z.object({
   key: z.string(),
   contentType: z.string(),
   size: z.number(),
-  status: z.nativeEnum(BlogStatus),
+  status: z.enum(['draft', 'published', 'archived', 'locked']),
   authorId: z.string(),
   createdAt: z.union([z.string(), z.date()]),
   updatedAt: z.union([z.string(), z.date()]),
