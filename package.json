@@ -31,6 +31,7 @@
     }
   },
   "dependencies": {
+    "@better-auth/passkey": "1.4.19",
     "better-auth": "^1.5.4",
     "zod": "^4.1.12"
   },
