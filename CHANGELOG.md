@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.4](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v0.7.3...v0.7.4) (2026-03-08)
+
+
+### Bug Fixes
+
+* fixed zod types ([488fd4b](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/488fd4b09c4e38b63305986151110b1b84e7ca30))
+
 ## [0.7.3](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v0.7.2...v0.7.3) (2026-03-08)
 
 
