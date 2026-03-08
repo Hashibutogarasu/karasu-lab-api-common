@@ -125,7 +125,10 @@ export class BetterAuthBuilder<TPlugins extends any[] = []>
   > {
     const options: BetterAuthOptions = {
       ...this.serverOptions,
-      plugins: this.plugin.getPlugins(),
+      plugins: [
+        ...(this.serverOptions.plugins || []),
+        ...this.plugin.getPlugins(),
+      ],
     } as BetterAuthOptions;
 
     return betterAuth(options as any) as unknown as Auth<
