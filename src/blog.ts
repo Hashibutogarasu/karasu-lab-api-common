@@ -1,19 +1,14 @@
 import { z } from 'zod';
 import { attachmentDataSchema } from './attachment.js';
+import { BlogStatus } from './blog-status.js';
 
 /**
  * Blog domain shared types.
  * Used by both the API package and the frontend.
  */
 
-export const BlogStatus = {
-  ARCHIVED: 'archived',
-  DRAFT: 'draft',
-  LOCKED: 'locked',
-  PUBLISHED: 'published',
-} as const;
-
-export type BlogStatus = (typeof BlogStatus)[keyof typeof BlogStatus];
+export { BlogStatus };
+export type { BlogStatus as BlogStatusType } from './blog-status.js';
 
 export const blogDataSchema = z.object({
   id: z.string(),
@@ -22,8 +17,8 @@ export const blogDataSchema = z.object({
   authorId: z.string(),
   status: z.nativeEnum(BlogStatus),
   tags: z.array(z.string()),
-  createdAt: z.string(),
-  updatedAt: z.string(),
+  createdAt: z.union([z.string(), z.date()]),
+  updatedAt: z.union([z.string(), z.date()]),
   attachments: z.array(attachmentDataSchema).optional(),
 });
 
