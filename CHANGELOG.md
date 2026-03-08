@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.1](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v0.7.0...v0.7.1) (2026-03-08)
+
+
+### Bug Fixes
+
+* simplify createdAt and updatedAt types to string in attachment and blog schemas ([f47328d](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/f47328d09f6d0ba0ccf37c6e236f4f2f266f588f))
+* update attachment status schema to use enum values directly ([959793d](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/959793d4549d8eb1228a03d90a810f1f9c36395b))
+
 ## [0.7.0](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v0.6.0...v0.7.0) (2026-03-08)
 
 
