@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.5](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v0.7.4...v0.7.5) (2026-03-10)
+
+
+### Bug Fixes
+
+* fixed tsconfig errors ([b34f193](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/b34f193cd4f85fd080401feb1ea28f0d7ce81779))
+* update prepare script to use pnpm ([7b45dbe](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/7b45dbed1c341d7de3fb536b655f6018e2edb548))
+
 ## [0.7.4](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v0.7.3...v0.7.4) (2026-03-08)
 
 
