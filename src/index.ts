@@ -9,6 +9,7 @@ export type { DiscoveryResponse } from './plugins/discovery.js';
 export * from './interfaces/endpoint.interface.js';
 export * from './interfaces/plugin.interface.js';
 export * from './interfaces/auth-config.interface.js';
+export * from './interfaces/auth-options.interface.js';
 export {
   AbstractEnvironment,
   Environment,

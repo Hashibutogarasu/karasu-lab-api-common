@@ -6,3 +6,4 @@ export { UserConfigCategory } from './user-config.category.js';
 export { SessionConfigCategory } from './session-config.category.js';
 export { DatabaseConfigCategory } from './database-config.category.js';
 export { PluginConfigCategory } from './plugin-config.category.js';
+export { ExperimentalConfigCategory } from './experimental-config.category.js';

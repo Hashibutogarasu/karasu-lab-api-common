@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { BetterAuthOptions, BetterAuthClientOptions, Auth } from 'better-auth';
+import { BetterAuthClientOptions, Auth } from 'better-auth';
 import { AuthClient } from 'better-auth/client';
+import { ExtendedBetterAuthOptions } from '../interfaces/auth-options.interface.js';
 
 import {
   BasicConfigCategory,
@@ -10,6 +11,7 @@ import {
   SessionConfigCategory,
   DatabaseConfigCategory,
   PluginConfigCategory,
+  ExperimentalConfigCategory,
 } from './categories/index.js';
 
 /**
@@ -33,6 +35,9 @@ export interface IBetterAuthBuilder<TPlugins extends any[] = []> {
   readonly session: SessionConfigCategory<IBetterAuthBuilder<TPlugins>>;
   readonly database: DatabaseConfigCategory<IBetterAuthBuilder<TPlugins>>;
   readonly plugin: PluginConfigCategory<IBetterAuthBuilder<TPlugins>>;
+  readonly experimental: ExperimentalConfigCategory<
+    IBetterAuthBuilder<TPlugins>
+  >;
 
   // Special plugin methods for type-safe plugin addition
   withPlugin<TPlugin>(
@@ -43,7 +48,7 @@ export interface IBetterAuthBuilder<TPlugins extends any[] = []> {
   ): IBetterAuthBuilder<[...TPlugins, ...TNewPlugins]>;
 
   buildServer(): Auth<
-    BetterAuthOptions & {
+    ExtendedBetterAuthOptions & {
       plugins: TPlugins;
     }
   >;
@@ -67,7 +72,7 @@ export type IBetterAuthClient<TPlugins extends any[] = []> = AuthClient<
  * Better Auth Server type (type alias)
  */
 export type BetterAuthServer<TPlugins extends any[] = []> = Auth<
-  BetterAuthOptions & {
+  ExtendedBetterAuthOptions & {
     plugins: TPlugins;
   }
 >;

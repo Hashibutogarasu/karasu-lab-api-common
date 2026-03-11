@@ -1,4 +1,5 @@
 import { BetterAuthOptions } from 'better-auth';
+import { ExtendedBetterAuthOptions } from '../../interfaces/auth-options.interface.js';
 
 import { AbstractConfigCategory } from './abstract-config.category.js';
 
@@ -47,6 +48,24 @@ export class BasicConfigCategory<
 
   setRateLimit(rateLimit: BetterAuthOptions['rateLimit']): TBuilder {
     this.serverOptions.rateLimit = rateLimit;
+    return this.builder;
+  }
+
+  setIPAddressHeaders(headers: string[]): TBuilder {
+    this.serverOptions.advanced = {
+      ...this.serverOptions.advanced,
+      ipAddress: {
+        ...this.serverOptions.advanced?.ipAddress,
+        ipAddressHeaders: headers,
+      },
+    };
+    return this.builder;
+  }
+
+  setCookieCache(
+    config: NonNullable<ExtendedBetterAuthOptions['cookieCache']>,
+  ): TBuilder {
+    this.serverOptions.cookieCache = config;
     return this.builder;
   }
 }

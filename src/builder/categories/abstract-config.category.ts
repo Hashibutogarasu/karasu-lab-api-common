@@ -1,4 +1,5 @@
-import { BetterAuthOptions, BetterAuthClientOptions } from 'better-auth';
+import { BetterAuthClientOptions } from 'better-auth';
+import { ExtendedBetterAuthOptions } from '../../index.js';
 
 /**
  * Abstract base class for configuration categories
@@ -7,7 +8,7 @@ import { BetterAuthOptions, BetterAuthClientOptions } from 'better-auth';
  */
 export abstract class AbstractConfigCategory<TBuilder> {
   constructor(
-    public serverOptions: Partial<BetterAuthOptions>,
+    public serverOptions: Partial<ExtendedBetterAuthOptions>,
     public clientOptions: Partial<BetterAuthClientOptions>,
     protected builder: TBuilder,
   ) {}
@@ -15,7 +16,7 @@ export abstract class AbstractConfigCategory<TBuilder> {
   /**
    * Get server options reference
    */
-  protected getServerOptions(): Partial<BetterAuthOptions> {
+  protected getServerOptions(): Partial<ExtendedBetterAuthOptions> {
     return this.serverOptions;
   }
 

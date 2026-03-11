@@ -1,11 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {
-  betterAuth,
-  BetterAuthClientOptions,
-  BetterAuthOptions,
-  Auth,
-} from 'better-auth';
+import { betterAuth, BetterAuthClientOptions, Auth } from 'better-auth';
 import { createAuthClient, AuthClient } from 'better-auth/client';
+import { ExtendedBetterAuthOptions } from '../interfaces/auth-options.interface.js';
 
 import {
   IBetterAuthBuilder,
@@ -20,6 +16,7 @@ import {
   SessionConfigCategory,
   DatabaseConfigCategory,
   PluginConfigCategory,
+  ExperimentalConfigCategory,
 } from './categories/index.js';
 
 // Re-export types from interface file
@@ -33,7 +30,7 @@ export type { IBetterAuthBuilder, IBetterAuthClient, BetterAuthServer };
 export class BetterAuthBuilder<TPlugins extends any[] = []>
   implements IBetterAuthBuilder<TPlugins>
 {
-  public serverOptions: Partial<BetterAuthOptions> = {};
+  public serverOptions: Partial<ExtendedBetterAuthOptions> = {};
   public clientOptions: Partial<BetterAuthClientOptions> = {};
 
   // Configuration categories (public for direct access)
@@ -44,6 +41,7 @@ export class BetterAuthBuilder<TPlugins extends any[] = []>
   public readonly session: SessionConfigCategory<this>;
   public readonly database: DatabaseConfigCategory<this>;
   public readonly plugin: PluginConfigCategory<this>;
+  public readonly experimental: ExperimentalConfigCategory<this>;
 
   private constructor() {
     // Initialize all configuration categories with shared options
@@ -82,6 +80,11 @@ export class BetterAuthBuilder<TPlugins extends any[] = []>
       this.clientOptions,
       this,
     );
+    this.experimental = new ExperimentalConfigCategory(
+      this.serverOptions,
+      this.clientOptions,
+      this,
+    );
   }
 
   /**
@@ -102,7 +105,9 @@ export class BetterAuthBuilder<TPlugins extends any[] = []>
    * Add a plugin to the builder
    * Special method for type-safe plugin addition
    */
-  withPlugin<TPlugin>(plugin: TPlugin): BetterAuthBuilder<[...TPlugins, TPlugin]> {
+  withPlugin<TPlugin>(
+    plugin: TPlugin,
+  ): BetterAuthBuilder<[...TPlugins, TPlugin]> {
     this.plugin.addPlugin(plugin);
     return this as any;
   }
@@ -119,20 +124,20 @@ export class BetterAuthBuilder<TPlugins extends any[] = []>
   }
 
   buildServer(): Auth<
-    BetterAuthOptions & {
+    ExtendedBetterAuthOptions & {
       plugins: TPlugins;
     }
   > {
-    const options: BetterAuthOptions = {
+    const options: ExtendedBetterAuthOptions = {
       ...this.serverOptions,
       plugins: [
         ...(this.serverOptions.plugins || []),
         ...this.plugin.getPlugins(),
       ],
-    } as BetterAuthOptions;
+    } as ExtendedBetterAuthOptions;
 
     return betterAuth(options as any) as unknown as Auth<
-      BetterAuthOptions & {
+      ExtendedBetterAuthOptions & {
         plugins: TPlugins;
       }
     >;
