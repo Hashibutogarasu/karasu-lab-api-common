@@ -32,3 +32,11 @@ export { PluginBuilder, createPlugin } from './builder/plugin-builder.js';
 export type { PluginEndpointConfig } from './builder/plugin-builder.js';
 export { UserRole } from './roles.js';
 export type { UserRole as UserRoleType } from './roles.js';
+
+export * from './api/client.js';
+export * from './api/schemaHelper.js';
+export * from './api/schema.js';
+
+export * from './auth/plugins.js';
+export * from './auth/client.js';
+export * from './components/auth-layout.js';

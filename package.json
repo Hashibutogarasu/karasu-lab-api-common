@@ -31,8 +31,13 @@
     }
   },
   "dependencies": {
+    "@better-auth/api-key": "^1.5.4",
     "@better-auth/passkey": "^1.5.4",
+    "@tolgee/react": "^6.3.0",
     "better-auth": "^1.5.4",
+    "openapi-fetch": "^0.17.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "zod": "^4.1.12"
   },
   "devDependencies": {
