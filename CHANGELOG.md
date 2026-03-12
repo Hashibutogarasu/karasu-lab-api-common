@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v0.8.0...v1.0.0) (2026-03-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* added react ui layouts
+
+### Features
+
+* added react ui layouts ([5e18967](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/5e18967057b9e27f75b811b04dbcb6e08fccf6d4))
+
 ## [0.8.0](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v0.7.7...v0.8.0) (2026-03-11)
 
 
