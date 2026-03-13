@@ -27,7 +27,7 @@ export interface paths {
             path?: never;
             cookie?: never;
         };
-        /** List blog posts */
+        /** List published blog posts */
         get: operations["BlogController_listBlogs"];
         put?: never;
         /** Create a new blog post */
@@ -55,17 +55,14 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/blogs/mine": {
+    "/blogs/my": {
         parameters: {
             query?: never;
             header?: never;
             path?: never;
             cookie?: never;
         };
-        /**
-         * List own blog posts
-         * @deprecated
-         */
+        /** List own blog posts */
         get: operations["BlogController_listMyBlogs"];
         put?: never;
         post?: never;
@@ -709,7 +706,6 @@ export interface operations {
                 sort?: string;
                 /** @description archived | draft | locked | published */
                 status?: string;
-                mine?: boolean;
                 cursor?: string;
             };
             header?: never;
@@ -718,7 +714,7 @@ export interface operations {
         };
         requestBody?: never;
         responses: {
-            /** @description Return a list of blog posts. */
+            /** @description Return a list of published blog posts. */
             200: {
                 headers: {
                     [name: string]: unknown;
@@ -782,9 +778,10 @@ export interface operations {
             query?: {
                 page?: number;
                 limit?: number;
-                sort?: "asc" | "desc";
-                status?: "archived" | "draft" | "locked" | "published";
-                mine?: boolean;
+                /** @description asc | desc */
+                sort?: string;
+                /** @description archived | draft | locked | published */
+                status?: string;
                 cursor?: string;
             };
             header?: never;
