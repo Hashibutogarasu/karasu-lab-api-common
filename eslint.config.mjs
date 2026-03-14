@@ -24,6 +24,7 @@ const config = [
       'no-console': 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
+      '@typescript-eslint/ban-ts-comment': 'off'
     },
   },
   {
