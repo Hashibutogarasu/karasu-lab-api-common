@@ -457,6 +457,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/providers": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** List available authentication providers */
+        get: operations["ProvidersController_getProviders"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -668,6 +685,15 @@ export interface components {
             image?: string;
             username?: string;
             displayUsername?: boolean;
+        };
+        ProvidersResponseDto: {
+            /** @description List of available authentication providers */
+            providers: {
+                /** @description The unique identifier for the provider (e.g., "google", "discord") */
+                id: string;
+                /** @description The display name for the provider */
+                name: string;
+            }[];
         };
     };
     responses: never;
@@ -1594,6 +1620,26 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content?: never;
+            };
+        };
+    };
+    ProvidersController_getProviders: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Return a list of available authentication providers. */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ProvidersResponseDto"];
+                };
             };
         };
     };
