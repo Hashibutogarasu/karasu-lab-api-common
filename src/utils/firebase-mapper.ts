@@ -1,5 +1,5 @@
 import { toDateString } from './date.js';
-import type { BlogData } from '../blog.js';
+import { BlogData, BlogStatus } from '../blog.js';
 import type { AttachmentData } from '../attachment.js';
 
 /**
@@ -31,8 +31,14 @@ export const mapBlog = (snapshot: unknown): BlogData => {
   return {
     id: doc.id,
     ...data,
+    title: data?.title ?? '',
+    content: data?.content ?? '',
+    authorId: data?.authorId ?? '',
+    status: (data?.status as BlogStatus) ?? BlogStatus.DRAFT,
+    tags: (data?.tags as string[]) ?? [],
     createdAt: toDateString(data?.createdAt),
     updatedAt: toDateString(data?.updatedAt),
+    likeCount: data?.likeCount ?? 0,
   } as BlogData;
 };
 

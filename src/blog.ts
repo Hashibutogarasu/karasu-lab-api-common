@@ -20,6 +20,14 @@ export const blogDataSchema = z.object({
   createdAt: z.string(),
   updatedAt: z.string(),
   attachments: z.array(attachmentDataSchema).optional(),
+  likeCount: z.number().default(0),
 });
 
 export type BlogData = z.infer<typeof blogDataSchema>;
+
+export const blogLikeSchema = z.object({
+  userId: z.string(),
+  createdAt: z.string(),
+});
+
+export type BlogLike = z.infer<typeof blogLikeSchema>;

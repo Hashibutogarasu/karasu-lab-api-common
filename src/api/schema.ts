@@ -91,6 +91,24 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/blogs/{id}/like": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        /** Like a blog post */
+        put: operations["BlogController_likeBlog"];
+        post?: never;
+        /** Unlike a blog post */
+        delete: operations["BlogController_unlikeBlog"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/attachments": {
         parameters: {
             query?: never;
@@ -921,6 +939,50 @@ export interface operations {
         requestBody?: never;
         responses: {
             /** @description The blog post has been successfully deleted. */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SuccessResponseDto"];
+                };
+            };
+        };
+    };
+    BlogController_likeBlog: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description The blog post has been successfully liked. */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SuccessResponseDto"];
+                };
+            };
+        };
+    };
+    BlogController_unlikeBlog: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description The blog post has been successfully unliked. */
             200: {
                 headers: {
                     [name: string]: unknown;
