@@ -491,15 +491,15 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/firebase/token": {
+    "/firebase/verify": {
         parameters: {
             query?: never;
             header?: never;
             path?: never;
             cookie?: never;
         };
-        /** Get a Firebase Custom Token for the authenticated user */
-        get: operations["FirebaseController_getToken"];
+        /** Verify Firebase ID Token from session */
+        get: operations["FirebaseController_verifyToken"];
         put?: never;
         post?: never;
         delete?: never;
@@ -1695,7 +1695,7 @@ export interface operations {
             };
         };
     };
-    FirebaseController_getToken: {
+    FirebaseController_verifyToken: {
         parameters: {
             query?: never;
             header?: never;
@@ -1704,16 +1704,12 @@ export interface operations {
         };
         requestBody?: never;
         responses: {
-            /** @description Returns the Firebase Custom Token. */
+            /** @description Firebase ID Token is valid. */
             200: {
                 headers: {
                     [name: string]: unknown;
                 };
-                content: {
-                    "application/json": {
-                        token?: string;
-                    };
-                };
+                content?: never;
             };
         };
     };
