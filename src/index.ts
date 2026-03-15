@@ -33,6 +33,10 @@ export type { PluginEndpointConfig } from './builder/plugin-builder.js';
 export { UserRole } from './roles.js';
 export type { UserRole as UserRoleType } from './roles.js';
 
+export * from './utils/date.js';
+export * from './utils/firebase-mapper.js';
+export * from './utils/blog-query.js';
+
 export * from './api/client.js';
 export * from './api/schemaHelper.js';
 export * from './api/schema.js';
