@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v1.3.0...v1.4.0) (2026-03-15)
+
+
+### Features
+
+* added firebase utils ([9bcc7a5](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/9bcc7a5e7b523c726a8c27646331226a94202744))
+
 ## [1.3.0](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v1.2.0...v1.3.0) (2026-03-15)
 
 
