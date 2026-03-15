@@ -26,6 +26,8 @@ export type { IBetterAuthBuilder, IBetterAuthClient, BetterAuthServer };
  * Better Auth Builder implementation
  * Uses Dependency Injection and Polymorphism to organize configuration
  * Each category handles its own configuration logic
+ *
+ * @deprecated Use direct betterAuth configuration instead.
  */
 export class BetterAuthBuilder<TPlugins extends any[] = []>
   implements IBetterAuthBuilder<TPlugins>

@@ -18,6 +18,8 @@ import {
  * Better Auth Builder interface
  * Provides access to configuration categories and build methods
  *
+ * @deprecated Use direct betterAuth configuration instead.
+ *
  * Configuration is organized into categories:
  * - basic: baseURL, basePath, secret, appName, trustedOrigins, logger, advanced, rateLimit
  * - email: emailAndPassword, emailVerification
