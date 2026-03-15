@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v1.2.0...v1.3.0) (2026-03-15)
+
+
+### Features
+
+* marked depricated to builder ([58105c2](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/58105c201565b134b5c0290d014c929922d1dcbf))
+
 ## [1.2.0](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v1.1.0...v1.2.0) (2026-03-14)
 
 
