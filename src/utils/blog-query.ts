@@ -1,8 +1,5 @@
 import { BlogStatus } from '../blog-status.js';
 
-/**
- * Shared query parameters for listing blogs.
- */
 export interface ListBlogsOptions {
   status?: BlogStatus;
   authorId?: string;
@@ -11,10 +8,6 @@ export interface ListBlogsOptions {
   cursor?: string;
 }
 
-/**
- * Generic Firestore Query interface.
- * Matches both firebase-admin and firebase client SDK.
- */
 export interface FirestoreQueryLike {
   where(field: string, op: string, value: unknown): FirestoreQueryLike;
   orderBy(field: string, direction?: 'asc' | 'desc'): FirestoreQueryLike;
@@ -22,18 +15,11 @@ export interface FirestoreQueryLike {
   startAfter(...args: unknown[]): FirestoreQueryLike;
 }
 
-/**
- * Builds a Firestore query for blogs based on common options.
- *
- * @param baseQuery - The base CollectionReference or Query.
- * @param options - Query options (status, authorId, limit, sort).
- * @returns The configured Firestore query.
- */
-export function buildBlogQuery(
-  baseQuery: FirestoreQueryLike,
+export function buildBlogQuery<T>(
+  baseQuery: T,
   options: ListBlogsOptions = {},
-): FirestoreQueryLike {
-  let q = baseQuery;
+): T {
+  let q = baseQuery as unknown as FirestoreQueryLike;
 
   if (options.status) {
     q = q.where('status', '==', options.status);
@@ -53,19 +39,13 @@ export function buildBlogQuery(
     q = q.limit(options.limit);
   }
 
-  return q;
+  return q as unknown as T;
 }
 
-/**
- * Builds a Firestore query for attachments belonging to a blog.
- *
- * @param baseQuery - The base CollectionReference or Query for attachments.
- * @param blogId - The ID of the blog.
- * @returns The configured Firestore query.
- */
-export function buildAttachmentsQuery(
-  baseQuery: FirestoreQueryLike,
+export function buildAttachmentsQuery<T>(
+  baseQuery: T,
   blogId: string,
-): FirestoreQueryLike {
-  return baseQuery.where('blogId', '==', blogId);
+): T {
+  const q = baseQuery as unknown as FirestoreQueryLike;
+  return q.where('blogId', '==', blogId) as unknown as T;
 }
