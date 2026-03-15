@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.1](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v1.4.0...v1.4.1) (2026-03-15)
+
+
+### Bug Fixes
+
+* added JSDoc ([4ca7945](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/4ca7945a8b7f540a7c751f0a9df36b2a0eaa1661))
+* restored JSDoc comment ([68f6a98](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/68f6a98078e0d22ffa24e318281afaed4ad9667e))
+
 ## [1.4.0](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v1.3.0...v1.4.0) (2026-03-15)
 
 
