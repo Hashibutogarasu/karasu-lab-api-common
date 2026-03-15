@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v1.4.1...v1.5.0) (2026-03-15)
+
+
+### Features
+
+* added blog content endpoint ([696d37d](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/696d37d00c2709cdcca6cdad0b493a83fac9c249))
+* added like blog post feature ([f9fa943](https://github.com/Hashibutogarasu/karasu-lab-api-common/commit/f9fa9433fa1cf631cb781a44850d9ed96fe24d67))
+
 ## [1.4.1](https://github.com/Hashibutogarasu/karasu-lab-api-common/compare/v1.4.0...v1.4.1) (2026-03-15)
 
 
