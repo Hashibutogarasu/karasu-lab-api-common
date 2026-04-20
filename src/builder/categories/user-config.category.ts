@@ -6,7 +6,9 @@ import { AbstractConfigCategory } from './abstract-config.category.js';
  * User and account configuration category
  * Handles: user, account
  */
-export class UserConfigCategory<TBuilder> extends AbstractConfigCategory<TBuilder> {
+export class UserConfigCategory<
+  TBuilder,
+> extends AbstractConfigCategory<TBuilder> {
   setUser(user: BetterAuthOptions['user']): TBuilder {
     this.serverOptions.user = user;
     return this.builder;

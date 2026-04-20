@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-empty-object-type */
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* oxlint-disable @typescript-eslint/no-empty-object-type */
+/* oxlint-disable @typescript-eslint/no-explicit-any */
 import { BetterAuthPlugin } from 'better-auth';
 import { createAuthEndpoint, AuthEndpoint } from 'better-auth/api';
 import z from 'zod/v4';
@@ -32,7 +32,9 @@ type InferServerEndpoint<TConfig extends PluginEndpointConfig> = AuthEndpoint<
       ? z.ZodType<B>
       : undefined;
   },
-  TConfig['handler'] extends (body: any) => Promise<infer R> | infer R ? R : any
+  TConfig['handler'] extends (body: any) => Promise<infer R> | (infer R)
+    ? R
+    : any
 >;
 
 /**

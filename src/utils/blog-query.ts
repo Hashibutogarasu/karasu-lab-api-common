@@ -64,10 +64,7 @@ export function buildBlogQuery<T>(
  * @param blogId - The ID of the blog.
  * @returns The configured Firestore query.
  */
-export function buildAttachmentsQuery<T>(
-  baseQuery: T,
-  blogId: string,
-): T {
+export function buildAttachmentsQuery<T>(baseQuery: T, blogId: string): T {
   const q = baseQuery as unknown as FirestoreQueryLike;
   return q.where('blogId', '==', blogId) as unknown as T;
 }

@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* oxlint-disable @typescript-eslint/no-explicit-any */
 import { BetterAuthClientOptions, Auth } from 'better-auth';
 import { AuthClient } from 'better-auth/client';
 import { ExtendedBetterAuthOptions } from '../interfaces/auth-options.interface.js';

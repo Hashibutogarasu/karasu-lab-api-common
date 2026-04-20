@@ -14,8 +14,8 @@
   "scripts": {
     "build": "tsc",
     "prepare": "pnpm run build",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "vp test run",
+    "test:watch": "vp test",
     "generate-schema": "openapi-typescript http://localhost:3001/api/docs/json -o ./src/api/schema.ts"
   },
   "files": [
@@ -47,7 +47,8 @@
     "@types/react-dom": "^19.2.3",
     "typescript": "^5.0.0",
     "openapi-typescript": "^7.13.0",
-    "vitest": "^4.0.18",
-    "vitest-mock-extended": "^3.1.0"
+    "vitest": "catalog:",
+    "vitest-mock-extended": "^3.1.0",
+    "vite-plus": "catalog:"
   }
 }

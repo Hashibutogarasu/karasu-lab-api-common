@@ -1,5 +1,8 @@
 import { Environment, EnvironmentUtils } from '../environment.js';
-import { IAuthClientConfig, IAuthConfigBuilder } from '../interfaces/auth-config.interface.js';
+import {
+  IAuthClientConfig,
+  IAuthConfigBuilder,
+} from '../interfaces/auth-config.interface.js';
 
 /**
  * Abstract base class for auth client configuration
@@ -101,7 +104,9 @@ export class TestAuthClientConfig extends AbstractAuthClientConfig {
  * @param environment Environment string (development, production, test)
  * @returns Auth config builder instance for the specified environment
  */
-export function createAuthClientConfig(environment: string | Environment): IAuthConfigBuilder {
+export function createAuthClientConfig(
+  environment: string | Environment,
+): IAuthConfigBuilder {
   if (EnvironmentUtils.isProduction(environment)) {
     return new ProductionAuthClientConfig();
   }

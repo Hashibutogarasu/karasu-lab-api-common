@@ -34,11 +34,13 @@ This project uses [Conventional Commits](https://www.conventionalcommits.org/) f
 To trigger a MAJOR version bump, use one of these formats:
 
 1. Add `!` after the type:
+
    ```
    feat!: remove deprecated API
    ```
 
 2. Add `BREAKING CHANGE:` in the footer:
+
    ```
    feat: update authentication flow
 
@@ -49,6 +51,7 @@ To trigger a MAJOR version bump, use one of these formats:
 ### Examples
 
 #### Feature (MINOR bump: 0.0.6 → 0.1.0)
+
 ```
 feat: add auth client config interfaces
 
@@ -57,6 +60,7 @@ frontend authentication configuration.
 ```
 
 #### Bug Fix (PATCH bump: 0.0.6 → 0.0.7)
+
 ```
 fix: correct cookie domain validation
 
@@ -65,6 +69,7 @@ in production environment.
 ```
 
 #### Breaking Change (MAJOR bump: 0.0.6 → 1.0.0)
+
 ```
 feat!: redesign plugin interface
 

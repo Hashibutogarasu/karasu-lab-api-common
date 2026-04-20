@@ -1,7 +1,4 @@
-import {
-  createAuthEndpoint,
-  APIError,
-} from 'better-auth/api';
+import { createAuthEndpoint, APIError } from 'better-auth/api';
 
 /**
  * Discovery plugin interface for frontend

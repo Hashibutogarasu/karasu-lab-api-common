@@ -5,8 +5,9 @@ import {
   passwordPluginInterface,
 } from '../index.js';
 
-export interface CustomClientPlugin<T extends { id: string }>
-  extends BetterAuthClientPlugin {
+export interface CustomClientPlugin<
+  T extends { id: string },
+> extends BetterAuthClientPlugin {
   id: T['id'];
   $InferServerPlugin: T;
 }

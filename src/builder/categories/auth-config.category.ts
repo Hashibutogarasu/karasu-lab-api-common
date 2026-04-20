@@ -6,8 +6,12 @@ import { AbstractConfigCategory } from './abstract-config.category.js';
  * Authentication configuration category
  * Handles: socialProviders, hooks
  */
-export class AuthConfigCategory<TBuilder> extends AbstractConfigCategory<TBuilder> {
-  setSocialProviders(providers: BetterAuthOptions['socialProviders']): TBuilder {
+export class AuthConfigCategory<
+  TBuilder,
+> extends AbstractConfigCategory<TBuilder> {
+  setSocialProviders(
+    providers: BetterAuthOptions['socialProviders'],
+  ): TBuilder {
     this.serverOptions.socialProviders = providers;
     return this.builder;
   }

@@ -7,7 +7,7 @@ import {
   expect,
   vi,
   beforeEach,
-} from 'vitest';
+} from 'vite-plus/test';
 
 import {
   BetterAuthBuilder,

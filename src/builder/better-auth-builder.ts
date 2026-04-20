@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* oxlint-disable @typescript-eslint/no-explicit-any */
 import { betterAuth, BetterAuthClientOptions, Auth } from 'better-auth';
 import { createAuthClient, AuthClient } from 'better-auth/client';
 import { ExtendedBetterAuthOptions } from '../interfaces/auth-options.interface.js';
@@ -29,9 +29,9 @@ export type { IBetterAuthBuilder, IBetterAuthClient, BetterAuthServer };
  *
  * @deprecated Use direct betterAuth configuration instead.
  */
-export class BetterAuthBuilder<TPlugins extends any[] = []>
-  implements IBetterAuthBuilder<TPlugins>
-{
+export class BetterAuthBuilder<
+  TPlugins extends any[] = [],
+> implements IBetterAuthBuilder<TPlugins> {
   public serverOptions: Partial<ExtendedBetterAuthOptions> = {};
   public clientOptions: Partial<BetterAuthClientOptions> = {};
 

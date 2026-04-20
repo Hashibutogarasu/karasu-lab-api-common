@@ -1,11 +1,13 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* oxlint-disable @typescript-eslint/no-explicit-any */
 import { AbstractConfigCategory } from './abstract-config.category.js';
 
 /**
  * Plugin configuration category
  * Handles: plugins
  */
-export class PluginConfigCategory<TBuilder> extends AbstractConfigCategory<TBuilder> {
+export class PluginConfigCategory<
+  TBuilder,
+> extends AbstractConfigCategory<TBuilder> {
   private plugins: any[] = [];
 
   addPlugin(plugin: any): TBuilder {
