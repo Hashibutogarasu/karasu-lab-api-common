@@ -1,6 +1,4 @@
 export { ClientAuthError } from './errors/client-auth-error.js';
-export * from './blog.js';
-export * from './attachment.js';
 export { passwordPluginInterface } from './plugins/password.js';
 export { oauthApplicationPluginInterface } from './plugins/oauth-application.js';
 export { passkeyPluginInterface } from './plugins/passkey.js';
@@ -35,7 +33,6 @@ export type { UserRole as UserRoleType } from './roles.js';
 
 export * from './utils/date.js';
 export * from './utils/firebase-mapper.js';
-export * from './utils/blog-query.js';
 
 export * from './api/client.js';
 export * from './api/schemaHelper.js';
