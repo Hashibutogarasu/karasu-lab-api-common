@@ -1,8 +1,8 @@
-import { Environment, EnvironmentUtils } from "../environment.js";
+import { Environment, EnvironmentUtils } from '../environment.js';
 import {
   IAuthClientConfig,
   IAuthConfigBuilder,
-} from "../interfaces/auth-config.interface.js";
+} from '../interfaces/auth-config.interface.js';
 
 /**
  * Abstract base class for auth client configuration
@@ -10,9 +10,9 @@ import {
  */
 abstract class AbstractAuthClientConfig implements IAuthConfigBuilder {
   protected _trustedOrigins: string[] = [];
-  protected _cookieDomain: string = "";
-  protected _baseUrl: string = "";
-  protected _basePath: string = "/api/auth";
+  protected _cookieDomain: string = '';
+  protected _baseUrl: string = '';
+  protected _basePath: string = '/api/auth';
 
   constructor() {
     this.setDefaults();
@@ -60,13 +60,13 @@ abstract class AbstractAuthClientConfig implements IAuthConfigBuilder {
 export class ProductionAuthClientConfig extends AbstractAuthClientConfig {
   protected setDefaults(): void {
     this._trustedOrigins = [
-      "https://sso.karasu256.com",
-      "https://www.karasu256.com",
-      "https://karasu256.com",
+      'https://sso.karasu256.com',
+      'https://www.karasu256.com',
+      'https://karasu256.com',
     ];
-    this._cookieDomain = ".karasu256.com";
-    this._baseUrl = "https://api.karasu256.com";
-    this._basePath = "/api/auth";
+    this._cookieDomain = '.karasu256.com';
+    this._baseUrl = 'https://api.karasu256.com';
+    this._basePath = '/api/auth';
   }
 }
 
@@ -76,15 +76,15 @@ export class ProductionAuthClientConfig extends AbstractAuthClientConfig {
 export class DevelopmentAuthClientConfig extends AbstractAuthClientConfig {
   protected setDefaults(): void {
     this._trustedOrigins = [
-      "http://localhost:3000",
-      "https://sso.karasu256.com",
-      "https://www.karasu256.com",
-      "https://karasu256.com",
-      "http://192.168.0.5:3001",
+      'http://localhost:3000',
+      'https://sso.karasu256.com',
+      'https://www.karasu256.com',
+      'https://karasu256.com',
+      'http://192.168.0.5:3001',
     ];
-    this._cookieDomain = "localhost";
-    this._baseUrl = "http://localhost:3001";
-    this._basePath = "/api/auth";
+    this._cookieDomain = 'localhost';
+    this._baseUrl = 'http://localhost:3001';
+    this._basePath = '/api/auth';
   }
 }
 
@@ -93,10 +93,10 @@ export class DevelopmentAuthClientConfig extends AbstractAuthClientConfig {
  */
 export class TestAuthClientConfig extends AbstractAuthClientConfig {
   protected setDefaults(): void {
-    this._trustedOrigins = ["http://localhost:3000"];
-    this._cookieDomain = "localhost";
-    this._baseUrl = "http://localhost:3001";
-    this._basePath = "/api/auth";
+    this._trustedOrigins = ['http://localhost:3000'];
+    this._cookieDomain = 'localhost';
+    this._baseUrl = 'http://localhost:3001';
+    this._basePath = '/api/auth';
   }
 }
 
